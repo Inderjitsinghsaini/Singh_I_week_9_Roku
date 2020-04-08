@@ -21,7 +21,10 @@ export default {
 
     methods: {
         navToUserHome() {
-            debugger;
+            //debugger;
+
+            localStorage.setItem("cachedUser", JSON.stringify(this.liveuser));
+            this.$router.push({ name: "home", params: { currentuser: this.liveuser}})
         }
     }
 
